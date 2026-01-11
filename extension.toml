@@ -1,6 +1,6 @@
 id = "vscode-icons"
 name = "VSCode Icons"
-version = "12.15.0"
+version = "12.16.0"
 schema_version = 1
 authors = ["Roberto Huertas <roberto.huertas@outlook.com>"]
 description = "Original vscode-icons, reimagined for Zed"
