@@ -1,0 +1,21 @@
+name: Release Extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Publish to Zed Extensions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bump Zed extension version
+        uses: huacnlee/zed-extension-action@v2
+        with:
+          extension-name: vscode-icons
+          push-to: robertohuertasm/extensions
+        env:
+          # PAT with repo+workflow scopes, able to push to robertohuertasm/extensions
+          COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
