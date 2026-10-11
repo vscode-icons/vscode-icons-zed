@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.18.0"
+          node-version-file: vendor/vscode-icons/.nvmrc
 
       - name: Install dependencies
         working-directory: vendor/vscode-icons
@@ -110,4 +110,3 @@ jobs:
             git tag "$VERSION"
             git push origin "$VERSION"
           fi
-          git push origin "$VERSION"
